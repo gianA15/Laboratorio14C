@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Laboratorio14C.Views.ListCourse"
+             xmlns:local="clr-namespace:Laboratorio14C.Views"
+           >
+
+    <ContentPage.Content>
+       
+        
+        <StackLayout>
+            <ListView x:Name="lvCourses" ItemsSource="{Binding Courses}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}"></Label>
+                                <Label Text="{Binding Descríption}"></Label>
+                                <Label Text="{Binding Credit}"></Label>
+                                <Label Text="{Binding StartDate}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
